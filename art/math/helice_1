@@ -1,0 +1,12 @@
+int x, y;
+
+void setup(){
+  size(800, 800);
+  frameRate(1000);
+  x = 0;
+}
+
+void draw(){
+  x++;
+  ellipse(300 * sin(6 * x) + width / 2.0, 100 * tan(101 * x) + width / 2.0, 10, 10);
+}
