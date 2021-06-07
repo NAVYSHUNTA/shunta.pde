@@ -6,7 +6,7 @@ void setup(){
 }
 
 void draw(){  
-  if(waiting && millis()<sec * 1000){
+  if(waiting && millis() < sec * 1000){
     return;
   }
   waiting = false;
