@@ -38,7 +38,7 @@ void function0(){
 
 
 void function1(){
-  for (int count = 0; count < 3; count++){
+  for(int count = 0; count < 3; count++){
     pushMatrix();
     translate(pow(2, 1) * size * cos(count * radian - PI / 3.0), pow(2, 1) * size * sin(count * radian - PI /3.0));
     function0();
@@ -47,7 +47,7 @@ void function1(){
 }
 
 void function2(){
-  for (int count = 0; count < 3; count++){
+  for(int count = 0; count < 3; count++){
     pushMatrix();
     translate(pow(2, 2) * size * cos(count * radian - PI / 3.0), pow(2, 2) * size * sin(count * radian - PI /3.0));
     function1();
@@ -56,7 +56,7 @@ void function2(){
 }
 
 void function3(){
-  for (int count = 0; count < 3; count++){
+  for(int count = 0; count < 3; count++){
     pushMatrix();
     translate(pow(2, 3) * size * cos(count * radian - PI / 3.0), pow(2, 3) * size * sin(count * radian - PI /3.0));
     function2();
@@ -65,7 +65,7 @@ void function3(){
 }
 
 void function4(){
-  for (int count = 0; count < 3; count++){
+  for(int count = 0; count < 3; count++){
     pushMatrix();
     translate(pow(2, 4) * size * cos(count * radian - PI / 3.0), pow(2, 4) * size * sin(count * radian - PI /3.0));
     function3();
@@ -74,7 +74,7 @@ void function4(){
 }
 
 void function5(){
-  for (int count = 0; count < 3; count++){
+  for(int count = 0; count < 3; count++){
     pushMatrix();
     translate(pow(2, 5) * size * cos(count * radian - PI / 3.0), pow(2, 5) * size * sin(count * radian - PI /3.0));
     function4();
@@ -83,7 +83,7 @@ void function5(){
 }
 
 void function6(){
-  for (int count = 0; count < 3; count++){
+  for(int count = 0; count < 3; count++){
     pushMatrix();
     translate(pow(2, 6) * size * cos(count * radian - PI / 3.0), pow(2, 6) * size * sin(count * radian - PI /3.0));
     function5();
