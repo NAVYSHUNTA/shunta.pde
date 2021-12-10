@@ -1,10 +1,11 @@
-int x = width / 2;
-int y = height / 2;
+int x, y;
 int scale = 5;
 
 void setup(){
   size(600, 600);
   frameRate(1000 / scale);
+  x = width / 2;
+  y = width / 2;
 }
 
 void draw(){
