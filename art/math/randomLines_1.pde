@@ -5,7 +5,7 @@ void setup(){
   size(600, 600);
   frameRate(1000 / scale);
   x = width / 2;
-  y = width / 2;
+  y = height / 2;
 }
 
 void draw(){
