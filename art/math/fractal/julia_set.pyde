@@ -1,5 +1,5 @@
 # このコードは、Processingの中にあるPythonモードで実行してください。
-xmin = ymin = 1.5
+xmin = ymin = -1.5
 xmax = ymax = -xmin
 cnt = 0
 
