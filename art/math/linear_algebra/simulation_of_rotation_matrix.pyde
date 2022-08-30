@@ -17,17 +17,19 @@ def draw():
     theta_y = map(mouseY, 0, height, 0, TWO_PI)
     rotation_matrix = [[cos(theta_x), -sin(theta_x)], [sin(theta_y), cos(theta_y)]]
     printGrid(xscl, yscl)
+
     text_i = [[0, 0], [1, 0], [1, 3], [0, 3]]
     text_i_point = [[0, 4], [1, 4], [1, 5], [0, 5]]
     text_n = [[2, 5], [2, 0], [3, 0], [3, 2.5], [4, 3.5], [5, 3], [5, 0], [6, 0], [6, 3.5], [5, 4.5], [4, 5], [3, 4], [3, 5]]
     input_matrix = [text_i, text_i_point, text_n]
+
     strokeWeight(5)
     fill(255, 0, 0)
-    for input_vector in input_matrix:
-        printGraph(input_vector)
+    for matrix in input_matrix:
+        printGraph(matrix)
     fill(0, 0, 255)
-    for input_vector in input_matrix:
-        output_matrix = getTransposeMatrix(getMatrixMultiplication(rotation_matrix, getTransposeMatrix(input_vector)))
+    for matrix in input_matrix:
+        output_matrix = getTransposeMatrix(getMatrixMultiplication(rotation_matrix, getTransposeMatrix(matrix)))
         printGraph(output_matrix)
 
 def printGrid(xscl, yscl):
