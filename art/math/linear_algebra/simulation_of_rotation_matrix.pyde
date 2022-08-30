@@ -30,20 +30,6 @@ def draw():
         output_matrix = getTransposeMatrix(getMatrixMultiplication(rotation_matrix, getTransposeMatrix(input_vector)))
         printGraph(output_matrix)
 
-def getTransposeMatrix(matrix):
-    t_matrix = [[] for _ in range(len(matrix[0]))]
-    for i in range(len(matrix[0])):
-        for j in range(len(matrix)):
-            t_matrix[i].append(matrix[j][i])
-    return t_matrix
-
-
-def printGraph(matrix):
-    beginShape()
-    for pt in matrix:
-        vertex(pt[0] * xscl, pt[1] * yscl)
-    endShape(CLOSE)
-
 def printGrid(xscl, yscl):
     strokeWeight(1)
     stroke(0, 255, 255)
@@ -54,6 +40,12 @@ def printGrid(xscl, yscl):
     stroke(0)
     line(0, ymin * yscl, 0, ymax * yscl)
     line(xmin * xscl, 0, xmax * xscl, 0)
+
+def printGraph(matrix):
+    beginShape()
+    for pt in matrix:
+        vertex(pt[0] * xscl, pt[1] * yscl)
+    endShape(CLOSE)
 
 def getMatrixAddition(matrix_a, matrix_b):
     matrix = []
@@ -75,3 +67,10 @@ def getMatrixMultiplication(matrix_a, matrix_b):
             matrix_row.append(sum_row)
         matrix.append(matrix_row)
     return matrix
+
+def getTransposeMatrix(matrix):
+    t_matrix = [[] for _ in range(len(matrix[0]))]
+    for i in range(len(matrix[0])):
+        for j in range(len(matrix)):
+            t_matrix[i].append(matrix[j][i])
+    return t_matrix
