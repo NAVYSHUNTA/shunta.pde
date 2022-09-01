@@ -1,4 +1,4 @@
-float x, y1, y2, num1, num2, num3;
+float x;
 
 void setup(){
   size(800, 800);
@@ -7,6 +7,7 @@ void setup(){
 }
 
 void draw(){
+  float num1, num2, num3, y1, y2;
   num1 = pow(x, 2.0 / 3.0);
   num2 = sq(num1) - 4 * (sq(x) - 1);
   num3 = sqrt(num2);
