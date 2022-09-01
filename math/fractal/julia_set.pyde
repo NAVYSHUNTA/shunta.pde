@@ -19,7 +19,7 @@ def draw():
     for x in range(width):
         for y in range(height):
             z = [(xmin + x * x_size), (ymin + y * y_size)]
-            colorNum = Julia_set(z, c, 100)
+            colorNum = getJulia_set(z, c, 100)
             if colorNum == 100:
                 fill(0, 255, 255)
             elif colorNum >= 10:
@@ -38,7 +38,7 @@ def getMult(a, b):
 def getAbs(a):
     return (a[0] ** 2 + a[1] ** 2) ** 0.5
 
-def Julia_set(z0, c, limitNum):
+def getJulia_set(z0, c, limitNum):
     cnt = 0
     z1 = z0
     while cnt <= limitNum:
