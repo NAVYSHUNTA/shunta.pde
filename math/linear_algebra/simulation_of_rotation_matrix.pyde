@@ -1,4 +1,5 @@
 # このコードは、Processingの中にあるPythonモードで実行してください。
+
 xmin = ymin = -10
 xmax = ymax = -xmin
 
