@@ -1,11 +1,11 @@
 # このコードは、Processingの中にあるPythonモードで実行してください。
 
+t = 0
+
 def setup():
     size(600, 600)
     rectMode(CENTER)
     colorMode(HSB)
-
-t = 0
 
 def draw():
     global t
