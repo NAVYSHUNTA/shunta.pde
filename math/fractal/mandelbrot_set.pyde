@@ -1,4 +1,5 @@
 # このコードは、Processingの中にあるPythonモードで実行してください。
+
 xmin = -2.5
 ymin = -2
 xmax = 1.5
@@ -18,7 +19,7 @@ def draw():
     for x in range(width):
         for y in range(height):
             z = [(xmin + x * x_size), (ymin + y * y_size)]
-            colorNum = Mandelbrot_set(z, 100)
+            colorNum = getMandelbrot_set(z, 100)
             if colorNum == 100:
                 fill(0, 255, 255)
             elif colorNum >= 10:
@@ -27,22 +28,22 @@ def draw():
                 fill(colorNum * 30, 0, 0)
             rect(x, height - y, 1, 1)
 
-def Add(a, b):
+def getAdd(a, b):
     return [a[0] + b[0], a[1] + b[1]]
 
-def Mult(a, b):
+def getMult(a, b):
     return [a[0] * b[0] - a[1] * b[1],
             a[0] * b[1] + a[1] * b[0]]
 
-def Abs(a):
+def getAbs(a):
     return (a[0] ** 2 + a[1] ** 2) ** 0.5
 
-def Mandelbrot_set(z0, limitNum):
+def getMandelbrot_set(z0, limitNum):
     cnt = 0
     z1 = z0
     while cnt <= limitNum:
-        if Abs(z1) > 2.0:
+        if getAbs(z1) > 2.0:
             return cnt
-        z1 = Add(Mult(z1, z1), z0)
+        z1 = getAdd(getMult(z1, z1), z0)
         cnt += 1
     return limitNum
