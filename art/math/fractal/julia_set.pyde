@@ -1,4 +1,5 @@
 # このコードは、Processingの中にあるPythonモードで実行してください。
+
 xmin = ymin = -1.5
 xmax = ymax = -xmin
 cnt = 0
@@ -27,22 +28,22 @@ def draw():
                 fill(colorNum * 30, 0, 0)
             rect(x, height - y, 1, 1)
 
-def Add(a, b):
+def getAdd(a, b):
     return [a[0] + b[0], a[1] + b[1]]
 
-def Mult(a, b):
+def getMult(a, b):
     return [a[0] * b[0] - a[1] * b[1],
             a[0] * b[1] + a[1] * b[0]]
 
-def Abs(a):
+def getAbs(a):
     return (a[0] ** 2 + a[1] ** 2) ** 0.5
 
 def Julia_set(z0, c, limitNum):
     cnt = 0
     z1 = z0
     while cnt <= limitNum:
-        if Abs(z1) > 2.0:
+        if getAbs(z1) > 2.0:
             return cnt
-        z1 = Add(Mult(z1, z1), c)
+        z1 = getAdd(getMult(z1, z1), c)
         cnt += 1
     return limitNum
